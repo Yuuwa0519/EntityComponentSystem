@@ -78,6 +78,7 @@ function ECS.newWorld(Systems)
             for componentName, indexes in pairs(AllComponents) do 
                 indexes[id] = nil
             end 
+            table.remove(AllEntities, table.find(AllEntities, id))
         end 
     }
 
